@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}E-commerce{% endblock %}</title>
+        <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+        <link rel="stylesheet" href="{{asset('css/navbar.css')}}">       
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+       
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+
+    </head>
+
+    <body>
+
+    <!--start navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark" id="main_navbar">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">            
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{path('home')}}">Home</a>
+                </li>
+
+
+
+                <li class="nav-item dropdown" id="navbg">
+                    <a class="nav-link dropdown-toggle" href="{{path('informatique')}}" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Informatique
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Ordinateur
+                            </a>
+                            <ul class="dropdown-menu" id="" aria-labelledby="navbarDropdown1">
+                                <li><a class="dropdown-item" href="#">Ordinateur fixe</a></li>
+                                <li><a class="dropdown-item" href="#">Ordinateur portable</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Composant ordinateur
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                    <li><a class="dropdown-item" href="#">Boîtier</a></li>
+                                    <li><a class="dropdown-item" href="#">Alimentation</a></li>
+                                    <li><a class="dropdown-item" href="#">Disque dur</a></li>
+                                    <li><a class="dropdown-item" href="#">Disque SSD</a></li>
+                                    <li><a class="dropdown-item" href="#">Carte mère</a></li>
+                                    <li><a class="dropdown-item" href="{{path('product_gpu')}}">Carte graphique</a></li>
+                                    <li><a class="dropdown-item" href="#">Mémoire vive</a></li>
+                                    <li><a class="dropdown-item" href="#">Processeur</a></li>
+                                    <li><a class="dropdown-item" href="#">Refroidissement</a></li>
+                                </ul>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Périphériques
+                            </a>
+                            <ul class="dropdown-menu" id="dropdown2" aria-labelledby="navbarDropdown1">
+                                <li><a class="dropdown-item" href="#">Écran PC</a></li>
+                                <li><a class="dropdown-item" href="#">Clavier/souris/tapis</a></li>
+                                <li><a class="dropdown-item" href="#">Casque &amp; Micro</a></li>
+                                <li><a class="dropdown-item" href="#">Imprimante</a></li>
+                                <li><a class="dropdown-item" href="#">Casque VR</a></li>
+                                <li><a class="dropdown-item" href="#">Stockage externe</a></li>
+                                <li><a class="dropdown-item" href="#">Onduleur</a></li>
+                                <li><a class="dropdown-item" href="#">Webcam</a></li>
+                                <li><a class="dropdown-item" href="#">Fauteuil</a></li>
+                                <li><a class="dropdown-item" href="#">Tablette graphique</a></li>
+                                <li><a class="dropdown-item" href="#">Enceinte PC</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+        </div>
+    </nav>
+    
+  <!--end navbar -->
+
+        {% block body %}{% endblock %}
+
+        <!--start footer -->
+
+<footer class="footer-04">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					
+					<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+						<h2 class="footer-heading">Catégories</h2>
+						<ul class="list-unstyled">
+              <li><a href="#" class="py-1 d-block">Informatique</a></li>
+              <li><a href="#" class="py-1 d-block">Multimedia &amp; Son</a></li>
+              <li><a href="#" class="py-1 d-block">Téléphonie</a></li>
+            </ul>
+					</div>
+
+					<div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+						<h2 class="footer-heading">S'inscrire a la Newsletter</h2>
+						<form action="#" class="subscribe-form">
+              <div class="form-group d-flex">
+                <input type="text" class="form-control rounded-left" placeholder="Entrer votre adresse E-mail">
+                <button type="submit" class="form-control submit rounded-right"><span class="sr-only">Valider</span><i class="ion-ios-send"></i></button>
+              </div>
+            </form>
+
+            <h2 class="footer-heading mt-5">Suivez-nous</h2>
+            <ul class="ftco-footer-social p-0">
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="bi bi-twitter" style="font-size: 2rem;"></i></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="bi bi-facebook"  style="font-size: 2rem;"></i></a></li>
+              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="bi bi-instagram" style="font-size: 2rem;"></i></a></li>
+            </ul>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="w-100 mt-5 border-top py-5">
+				<div class="container">
+					<div class="row">
+
+	          <div class="col-md-6 col-lg-4 text-md-right">
+	          	<p class="mb-0 list-unstyled">
+	          		<a class="mr-md-3" href="#">Terms</a>
+	          		<a class="mr-md-3" href="#">Privacy</a>
+	          		<a class="mr-md-3" href="#">Compliances</a>
+	          	</p>
+	          </div>
+
+	        </div>
+				</div>
+			</div>
+
+		</footer>
+
+  <!--end footer -->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/navbar.js') }}"></script>
+    <script src="{{ asset('js/boostrap.min.js') }}"></script>
+
+    <script>
+        $(function () {
+            $('#main_navbar').bootnavbar({
+                //option
+                //animation: false
+            });
+        });
+    </script>
+
+    </body>
+
+</html>

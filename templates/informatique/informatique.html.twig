@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+
+
+
+{% block title %}E-commerce{% endblock %}
+
+{% block body %}
+
+<section class="categories-informatique">
+    <div class="container-fluid">
+     <div class="row justify-content-center">
+        <h2 class="titre-informatique">nos catégories informatique :</h2>
+        
+        <div class="card animate__animated animate__fadeInDown animate__delay-1s" style="width: 21rem;">
+        <a class="card-click" href="{{path('composantpc')}}">
+            <img class="card-img-top" src="{{asset('image/informatique/composant-pc.jpg')}}" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">nos composant pc</p>
+                </div>
+        </a>        
+        </div>
+
+        <div class="card animate__animated animate__fadeInDown animate__delay-2s" style="width: 21rem;">
+        <a class="card-click" href="">
+            <img class="card-img-top" src="{{asset('image/informatique/pc-portable-fixe.jpg')}}" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">nos ordinateur fixe et portable</p>
+                </div>
+        </a>        
+        </div>
+        
+        <div class="card animate__animated animate__fadeInDown animate__delay-3s" style="width: 21rem;">
+        <a class="card-click" href="">
+            <img class="card-img-top" src="{{asset('image/informatique/peripherique-pc.jpg')}}" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">nos périherique</p>
+                </div>
+        </a>
+        </div>
+        
+     </div>
+    
+    </div>
+</section>
+
+{% endblock %}

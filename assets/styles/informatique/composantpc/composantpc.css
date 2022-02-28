@@ -1,0 +1,40 @@
+.block-composantpc {
+    background-color: white;
+    width: 80%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.title-1{
+    margin-top: -5%;
+    margin-bottom: 5%;
+}
+
+.list-cate {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.list-compo {
+    width: 25%;
+    /*float: left;*/
+    margin-right: 1.99%;
+    margin-bottom: 1.99%;
+    border: 2px solid #E1E1E1;
+    background: 0 0;
+    background-color: white;
+    /*position: relative;*/
+    list-style: none;
+    text-align: left;
+    flex-direction: row;
+}
+
+.img-position {
+    padding-right: 10px;
+}

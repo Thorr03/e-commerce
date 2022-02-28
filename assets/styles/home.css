@@ -1,0 +1,11 @@
+body {
+    background-color: lightgray;
+}
+
+/** css page d'accueil **/
+.carousel-item{
+    max-height: 500px!important;
+} 
+.carousel-item img{
+    max-height: 500px!important;
+}
